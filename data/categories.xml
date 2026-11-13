@@ -1,0 +1,33 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<categories>
+    <category>
+        <id>1</id>
+        <name>Beef</name>
+        <description>Delicious recipes made with beef.</description>
+    </category>
+
+    <category>
+        <id>2</id>
+        <name>Chicken</name>
+        <description>Various chicken recipes for every meal.</description>
+    </category>
+
+    <category>
+        <id>3</id>
+        <name>Dessert</name>
+        <description>Sweet recipes and delicious desserts.</description>
+    </category>
+
+    <category>
+        <id>4</id>
+        <name>Seafood</name>
+        <description>Fresh seafood recipes.</description>
+    </category>
+
+    <category>
+        <id>5</id>
+        <name>Vegetarian</name>
+        <description>Healthy vegetarian meals.</description>
+    </category>
+</categories>
