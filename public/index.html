@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Explorer | Discover. Cook. Enjoy.</title>
+    <meta name="description" content="Discover delicious recipes, explore new flavors and plan your next meal with Recipe Explorer.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                Recipe<span>Explorer.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    YOUR DAILY DOSE OF INSPIRATION
+                </span>
+
+                <h1>
+                    Discover the joy<br>
+                    of <span>cooking.</span>
+                </h1>
+
+                <p class="hero-description">
+                    From simple everyday meals to something special,
+                    discover recipes that make every moment delicious.
+                </p>
+
+                <form class="search-form" id="searchForm">
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search recipes or ingredients..."
+                        aria-label="Search recipes"
+                        required
+                    >
+
+                    <button type="submit">Explore Recipes</button>
+                </form>
+
+                <div class="hero-note">
+                    <span class="note-icon">✦</span>
+                    Find inspiration for your next meal
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-main">
+                    <img
+                        src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1000&auto=format&fit=crop"
+                        alt="Fresh healthy food bowl"
+                    >
+                </div>
+
+                <div class="hero-floating-card">
+                    <span class="floating-icon">✦</span>
+                    <div>
+                        <strong>Made with love</strong>
+                        <small>Discover something delicious</small>
+                    </div>
+                </div>
+
+                <div class="hero-decoration"></div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section categories-section">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">EXPLORE THE POSSIBILITIES</span>
+                    <h2>What are you craving?</h2>
+                    <p>Find something you'll love in every category.</p>
+                </div>
+
+                <a href="categories.html" class="text-link">
+                    Explore all categories <span>→</span>
+                </a>
+            </div>
+
+            <div class="category-grid" id="categoryContainer">
+                <p class="loading-message">Discovering categories...</p>
+            </div>
+        </section>
+
+        <!-- Popular Recipes -->
+        <section class="section popular-section">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">A LITTLE INSPIRATION</span>
+                    <h2>Recipes to fall in love with.</h2>
+                    <p>Handpicked inspiration for your next cooking adventure.</p>
+                </div>
+
+                <a href="recipes.html" class="text-link">
+                    View all recipes <span>→</span>
+                </a>
+            </div>
+
+            <div class="recipe-grid" id="popularRecipes">
+                <p class="loading-message">Finding delicious recipes...</p>
+            </div>
+        </section>
+
+        <!-- Daily Inspiration -->
+        <section class="daily-section">
+            <div class="daily-content">
+                <span class="eyebrow">A FRESH IDEA FOR TODAY</span>
+                <h2>Not sure what to cook?</h2>
+                <p>
+                    Let us surprise you with something delicious.
+                    Discover a random recipe and make today a little more special.
+                </p>
+
+                <button class="primary-button" id="randomRecipeBtn">
+                    Surprise me <span>→</span>
+                </button>
+            </div>
+
+            <div class="daily-image">
+                <img
+                    id="randomRecipeImage"
+                    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&auto=format&fit=crop"
+                    alt="A delicious meal"
+                >
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <section class="section search-results-section hidden" id="searchResultsSection">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">YOUR SEARCH</span>
+                    <h2 id="searchResultsTitle">Search results</h2>
+                </div>
+            </div>
+
+            <div class="recipe-grid" id="searchResults"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    Recipe<span>Explorer.</span>
+                </a>
+                <p>
+                    A little inspiration, a lot of flavor.
+                    Discover your next favorite recipe.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="recipes.html">All Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html">Favorites</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Your Kitchen</h3>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Recipe Explorer. All rights reserved.</p>
+            <p>Made for food lovers <span>♥</span></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>
+
+    
