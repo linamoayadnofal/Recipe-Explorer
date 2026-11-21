@@ -402,5 +402,10 @@ The homepage has been connected to the backend. Additional pages, frontend inter
 - [MDN Web Docs](https://developer.mozilla.org/)
 
 ---
+## Live Demo
+
+[Open Recipe Explorer](https://recipe-explorer-a1fe.onrender.com)
+
+The first load may take a little longer if the server has been inactive.
 
 **Recipe Explorer — A little inspiration, a lot of flavor.**
