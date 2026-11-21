@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Recipes | Recipe Explorer</title>
+    <meta name="description" content="Explore delicious recipes, search by name or ingredient, and discover your next favorite meal.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/recipes.css">
+</head>
+
+<body class="page-recipes">
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="brand-mark" aria-hidden="true">R</span> Recipe Explorer
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="recipes.html" class="active" aria-current="page">Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a class="primary-button nav-search" href="recipes.html"><span class="home-search-icon" aria-hidden="true"></span>Search recipes</a>
+
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section recipes-page">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">THE RECIPE COLLECTION</span>
+                    <h1>Explore Recipes</h1>
+                    <p>
+                        Find your next favorite dish from a world of delicious recipes.
+                    </p>
+                </div>
+            </div>
+
+            <form id="recipesSearchForm" class="recipes-search-panel" role="search">
+                <label class="recipes-field">
+                    Search by recipe name
+                    <input type="search" id="recipesSearchInput" placeholder="Try lemon pasta">
+                </label>
+
+                <label class="recipes-field">
+                    Search by ingredient
+                    <input type="search" id="recipesIngredientInput" placeholder="Try garlic">
+                </label>
+
+                <label class="recipes-field">
+                    Category
+                    <select id="categoryFilter">
+                        <option value="all">All categories</option>
+                    </select>
+                </label>
+
+                <button type="submit" class="primary-button recipes-search-submit">Search</button>
+                <button type="button" id="clearFilters" class="text-link recipes-clear">× Clear all filters</button>
+            </form>
+
+            <div class="recipes-results-heading">
+                <div>
+                    <h2 id="recipesResultsTitle">All recipes</h2>
+                    <p id="recipesCount" aria-live="polite"></p>
+                </div>
+
+                <label class="recipes-sort" for="recipeSort">
+                    Sort by
+                    <select id="recipeSort">
+                        <option value="recommended">Recommended</option>
+                        <option value="name-asc">Name A–Z</option>
+                        <option value="name-desc">Name Z–A</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="recipe-grid" id="recipesContainer" aria-busy="true">
+
+                <p class="loading-message">
+                    Discovering delicious recipes...
+                </p>
+
+            </div>
+            <div class="recipes-pagination">
+                <button type="button" id="loadMoreRecipes" hidden>Load more recipes</button>
+                <p id="recipesProgress" role="status"></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="brand-mark" aria-hidden="true">R</span> Recipe Explorer
+                </a>
+                <p>
+                    Thoughtful recipes for everyday cooks, curious eaters, and every table in between.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="recipes.html">All Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html">Favorites</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Plan</h3>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-links footer-cta">
+                <h3>Fresh Inspiration, Weekly</h3>
+                <p>Save the recipes that make you want to cook.</p>
+                <a href="recipes.html">Start exploring</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Recipe Explorer. All rights reserved.</p>
+            <p>Made for food lovers <span>♥</span></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/recipes.js"></script>
+
+</body>
+</html>

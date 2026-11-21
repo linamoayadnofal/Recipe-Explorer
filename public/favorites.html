@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favorites | Recipe Explorer</title>
+    <meta name="description" content="Find your saved recipes in Recipe Explorer.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/recipes.css">
+    <link rel="stylesheet" href="css/favorites.css">
+</head>
+
+<body class="page-recipes page-favorites">
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="brand-mark" aria-hidden="true">R</span> Recipe Explorer
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html" class="active" aria-current="page">Favorites</a>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a class="primary-button nav-search" href="recipes.html"><span class="home-search-icon" aria-hidden="true"></span>Search recipes</a>
+
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main class="section favorites-page">
+        <header class="favorites-heading">
+            <p class="eyebrow">YOUR PERSONAL COOKBOOK</p>
+            <h1>Your Favorite Recipes</h1>
+            <p>All the dishes you love, in one place.</p>
+        </header>
+
+        <p id="favoritesCount" class="favorites-count" aria-live="polite"></p>
+        <div id="favoritesGrid" class="recipe-grid"></div>
+
+        <section id="favoritesEmpty" class="favorites-empty" hidden>
+            <span aria-hidden="true">♡</span>
+            <h2>No favorites yet</h2>
+            <p>Tap the heart on a recipe to save it here.</p>
+            <a class="primary-button" href="recipes.html">Explore recipes</a>
+        </section>
+        <p id="favoritesMessage" role="status"></p>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="brand-mark" aria-hidden="true">R</span> Recipe Explorer
+                </a>
+                <p>
+                    Thoughtful recipes for everyday cooks, curious eaters, and every table in between.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="recipes.html">All Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html">Favorites</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Plan</h3>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-links footer-cta">
+                <h3>Fresh Inspiration, Weekly</h3>
+                <p>Save the recipes that make you want to cook.</p>
+                <a href="recipes.html">Start exploring</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Recipe Explorer. All rights reserved.</p>
+            <p>Made for food lovers <span>♥</span></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/favorites.js"></script>
+
+</body>
+</html>

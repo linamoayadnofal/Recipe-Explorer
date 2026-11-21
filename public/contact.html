@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Recipe Explorer</title>
+    <meta name="description" content="Get in touch with Recipe Explorer.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/recipes.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body class="page-recipes page-contact">
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="brand-mark" aria-hidden="true">R</span> Recipe Explorer
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+            </nav>
+
+            <a class="primary-button nav-search" href="recipes.html"><span class="home-search-icon" aria-hidden="true"></span>Search recipes</a>
+
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main class="section contact-page">
+        <header class="contact-heading">
+            <p class="eyebrow">WE’RE LISTENING</p>
+            <h1>Let’s Talk Food</h1>
+            <p>Have a recipe suggestion or a question? We’d love to hear from you.</p>
+        </header>
+
+        <div class="contact-layout">
+            <aside class="contact-intro" aria-labelledby="contactIntroHeading">
+                <img src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=900&amp;auto=format&amp;fit=crop" alt="" loading="lazy">
+                <div class="contact-intro-content">
+                    <p class="eyebrow">COME SAY HELLO</p>
+                    <h2 id="contactIntroHeading">Food is better when it’s shared.</h2>
+                    <p>Questions, recipe ideas, or just want to tell us what you cooked? Our kitchen door is always open.</p>
+                </div>
+            </aside>
+
+            <section class="contact-panel" aria-labelledby="contactFormHeading">
+                <h2 id="contactFormHeading">Send us a note</h2>
+                <p class="contact-hint">All fields marked with an asterisk are required.</p>
+                <form id="contactForm" action="/api/contact" method="post">
+                    <div class="contact-fields">
+                        <label>Full name *
+                            <input name="name" autocomplete="name" maxlength="100" placeholder="Your full name" required>
+                        </label>
+                        <label>Email address *
+                            <input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required>
+                        </label>
+                    </div>
+                    <label>Subject *
+                        <select name="subject" required>
+                            <option value="" selected disabled>What can we help with?</option>
+                            <option>Recipe suggestion</option>
+                            <option>Question</option>
+                            <option>Website feedback</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <label>Message *
+                        <textarea name="message" rows="6" maxlength="3000" placeholder="Tell us what’s on your mind…" required></textarea>
+                    </label>
+                    <p class="contact-hint">Messages are saved by Recipe Explorer.</p>
+                    <button class="primary-button" type="submit">Submit message <span aria-hidden="true">→</span></button>
+                    <p id="contactStatus" role="status"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="brand-mark" aria-hidden="true">R</span> Recipe Explorer
+                </a>
+                <p>
+                    Thoughtful recipes for everyday cooks, curious eaters, and every table in between.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="recipes.html">All Recipes</a>
+                <a href="categories.html">Categories</a>
+                <a href="favorites.html">Favorites</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Plan</h3>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-links footer-cta">
+                <h3>Fresh Inspiration, Weekly</h3>
+                <p>Save the recipes that make you want to cook.</p>
+                <a href="recipes.html">Start exploring</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Recipe Explorer. All rights reserved.</p>
+            <p>Made for food lovers <span>♥</span></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+</html>
