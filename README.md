@@ -101,8 +101,8 @@ The website is planned to include the following pages and features:
 ## 📂 Project Structure
 
 ```text
+
 Recipe-Explorer/
-│
 ├── server.js
 ├── package.json
 ├── package-lock.json
@@ -111,19 +111,20 @@ Recipe-Explorer/
 ├── README.md
 │
 ├── data/
-│   └── categories.xml
+│   ├── categories.xml
+│   └── contact-messages.jsonl    # ينشأ عند إرسال أول رسالة
 │
 ├── routes/
 │   ├── recipeRoutes.js
 │   ├── categoryRoutes.js
-│   └── googleRoutes.js
+│   ├── googleRoutes.js
+│   └── contactRoutes.js
 │
 ├── services/
 │   ├── mealService.js
 │   └── googleSearchService.js
 │
 └── public/
-    │
     ├── index.html
     ├── recipes.html
     ├── recipe-details.html
@@ -135,22 +136,23 @@ Recipe-Explorer/
     ├── css/
     │   ├── style.css
     │   ├── components.css
-    │   └── responsive.css
+    │   ├── responsive.css
+    │   ├── recipes.css
+    │   ├── categories.css
+    │   ├── favorites.css
+    │   ├── meal-planner.css
+    │   └── contact.css
     │
-    ├── js/
-    │   ├── app.js
-    │   ├── api.js
-    │   ├── home.js
-    │   ├── recipes.js
-    │   ├── recipe-details.js
-    │   ├── categories.js
-    │   ├── favorites.js
-    │   ├── meal-planner.js
-    │   └── contact.js
-    │
-    └── assets/
-        ├── images/
-        └── icons/
+    └── js/
+        ├── app.js
+        ├── api.js
+        ├── home.js
+        ├── recipes.js
+        ├── recipe-details.js
+        ├── categories.js
+        ├── favorites.js
+        ├── meal-planner.js
+        └── contact.js
 ```
 
 ---
